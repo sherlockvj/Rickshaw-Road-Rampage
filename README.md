@@ -1,4 +1,4 @@
-# 🛺 Turbo Tuk-tuk 
+# 🛺 Rickshaw Road Rampage
 Rickshaw Rampage is a fast-paced, retro-style 2D arcade game where chaos meets charm in the bustling streets of India. Built using Kaboom.js, this game combines nostalgic pixel-art visuals with modern gameplay mechanics.
 
 ## Game Overview
