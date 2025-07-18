@@ -1,29 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import initGame from "../kaboom/game";
 
-const GameCanvas = () => {
-  const canvasRef = useRef(null);
+const Canvas = () => {
+	const canvasRef = useRef(null);
 
-  useEffect(() => {
-    const destroy = initGame(canvasRef.current);
-    return () => destroy && destroy();
-  }, []);
+	useEffect(() => {
+		const destroyGame = initGame(canvasRef.current);
 
-  return (
-    <div style={{ display: "flex", justifyContent: "center", background: "#000" }}>
-      <canvas
-        ref={canvasRef}
-        id="game"
-        width={960}
-        height={540}
-        style={{
-          border: "2px solid #00ffe7",
-          backgroundColor: "#111",
-          marginTop: "20px",
-        }}
-      />
-    </div>
-  );
+		return () => {
+			destroyGame();
+		};
+	}, []);
+
+	return (
+		<canvas
+			ref={canvasRef}
+			style={{
+				position: "fixed",
+				top: 0,
+				left: 0,
+				width: "100vw",
+				height: "100vh",
+				display: "block",
+			}}
+		/>
+	);
 };
 
-export default GameCanvas;
+export default Canvas;

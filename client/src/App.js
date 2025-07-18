@@ -1,13 +1,13 @@
+// App.js
 import React from "react";
-import GameCanvas from "./components/GameCanvas";
+import Canvas from "./components/GameCanvas";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Rickshaw Road Rampage 🚕</h1>
-      <GameCanvas />
-    </div>
-  );
+	return (
+		<div className="App" style={{"height": "100vh"}}>
+			<Canvas />
+		</div>
+	);
 }
 
 export default App;
